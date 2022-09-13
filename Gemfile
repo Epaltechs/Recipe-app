@@ -11,6 +11,10 @@ gem 'sprockets-rails'
 
 # linters installitions
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
+
+# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
@@ -55,7 +59,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing'
-  gem 'rspec-rails', '~> 4.0.0.beta2'
+  gem 'rspec-rails', '~> 6.0.0.rc1'
 end
 
 group :development do
