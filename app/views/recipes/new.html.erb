@@ -1,0 +1,38 @@
+<div>
+  <h1>Add food recipe</h1>
+
+  <%= form_with model: @recipe, url: user_food_recipes_path, method: :post do |f| %>
+
+  <div>
+      <div class="form-group">
+        <%= f.label :Name %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :Preparation_time  %>
+        <%= f.text_field :preparation_time %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :Cooking_time %>
+        <%= f.text_field :cooking_time, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :Public %>
+        <%= f.check_box :public, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit %>
+      </div>
+    </div>
+
+  <% end%>
+</div>

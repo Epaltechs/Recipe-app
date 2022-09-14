@@ -1,0 +1,12 @@
+<section>
+  <div>
+    <div>
+      <h3><%=@recipe.name%></h3>
+      <%=button_to 'REMOVE', user_food_recipes_path, method: :delete, data: { turbo: false } %>
+    </div>
+    <div>
+      <p>Decription for the recipe</p>
+      <div><%=@recipe.description %></div>
+    </div>
+  </div>
+</section>
