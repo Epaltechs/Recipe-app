@@ -6,10 +6,9 @@ Rails.application.routes.draw do
     resources :recipes #only: %i[index new show create]
   end
   
-
-  resources :shopping_lists, only: %i[index]
-  
+ 
   root 'users#index'
+
   # Defines the root path route ("/")
   # root "articles#index"
 end
