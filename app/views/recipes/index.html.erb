@@ -1,9 +1,10 @@
 <section>
+<% if @recipe.length > 0%>
   <% @recipe.each do |recipe|%>
     <div>
       <div>
         <h3><%=recipe.name%></h3>
-        <%=button_to 'REMOVE', "users/#{current_user.id}/recipes/#{@recipe.id}", :method =>:delete, :data=>{ turbo: false } %>
+        <%=button_to 'REMOVE', "/users/#{current_user.id}/recipes/#{recipe.id}", :method =>:delete, :data=>{ turbo: false } %>
       </div>
       <div>
         <p>Decription for the recipe</p>
@@ -11,4 +12,8 @@
       </div>
     </div>
   <%end%>
+  <% else %>
+  <p>There's no recipe</p>
+  <%= link_to 'ADD NEW RECIPE', new_user_recipe_path %>
+  <% end %>
 </section>
