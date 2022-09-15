@@ -10,6 +10,7 @@ class FoodsController < ApplicationController
   def create
     @food = Food.new(
       name: food_params[:name],
+      quantity: food_params[:quantity],
       measurement_unit: food_params[:measurement_unit],
       price: food_params[:price],
       user_id: current_user.id
@@ -38,6 +39,6 @@ class FoodsController < ApplicationController
   private
 
   def food_params
-    params.require(:food).permit(:name, :measurement_unit, :price)
+    params.require(:food).permit(:name, :quantity, :measurement_unit, :price)
   end
 end
