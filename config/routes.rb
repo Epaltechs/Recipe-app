@@ -7,9 +7,6 @@ Rails.application.routes.draw do
      resources :shopping_lists, only: %i[index]
   end
 
- 
-  
- 
   root 'users#index'
 
   # Defines the root path route ("/")
