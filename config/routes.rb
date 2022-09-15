@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :foods
     resources :recipes #only: %i[index new show create]
+    resources :shopping_lists, only: %i[index]
   end
 
   root 'users#index'
