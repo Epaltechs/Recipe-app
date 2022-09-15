@@ -16,11 +16,11 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
 
     if @recipe.save
-      redirect_to user_recipes_path(current_user.id)
+      redirect_to "users/#{current_user.id}/recipes" #user_recipes_path(current_user.id)
       flash[:notice] = 'Recipe creates successfully'
     else
-      flash[:alert] = 'The recipe wasn\'t created'
       render :new
+      flash[:alert] = 'The recipe wasn\'t created'
     end
   end
 
@@ -34,7 +34,8 @@ class RecipesController < ApplicationController
   end
 
   private
+
   def recipe_params
-    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :pubic)
+    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description)
   end
 end

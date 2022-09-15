@@ -1,7 +1,7 @@
 <div>
   <h1>Add food recipe</h1>
 
-  <%= form_with model: @recipe, url: user_food_recipes_path, method: :post do |f| %>
+  <%= form_with model: @recipe, url: "/users/#{current_user.id}/recipes", :method=>:post do |f| %>
 
   <div>
       <div class="form-group">
@@ -24,10 +24,10 @@
         <%= f.text_area :description, class: "form-control" %>
       </div>
 
-      <div class="form-group">
-        <%= f.label :Public %>
-        <%= f.check_box :public, class: "form-control" %>
-      </div>
+      <%# <div class="form-group"> %>
+        <%# <%= f.label :Public %> %>
+        <%# <%= f.check_box :public, class: "form-control" %> %>
+      <%# </div> %>
 
       <div class="form-group">
         <%= f.submit %>

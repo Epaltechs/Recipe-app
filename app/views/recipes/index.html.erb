@@ -1,12 +1,14 @@
 <section>
-  <div>
+  <% @recipe.each do |recipe|%>
     <div>
-      <h3><%=@recipe.name%></h3>
-      <%=button_to 'REMOVE', user_food_recipes_path, method: :delete, data: { turbo: false } %>
+      <div>
+        <h3><%=recipe.name%></h3>
+        <%=button_to 'REMOVE', "users/#{current_user.id}/recipes/#{@recipe.id}", :method =>:delete, :data=>{ turbo: false } %>
+      </div>
+      <div>
+        <p>Decription for the recipe</p>
+        <div><%=recipe.description %></div>
+      </div>
     </div>
-    <div>
-      <p>Decription for the recipe</p>
-      <div><%=@recipe.description %></div>
-    </div>
-  </div>
+  <%end%>
 </section>
