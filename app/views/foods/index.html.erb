@@ -9,7 +9,6 @@
   <thead class="table-light">
     <tr>
       <th>Food</th>
-      <th>Quantity</th>
       <th>Measurement Unit</th>
       <th>Unit price</th>
       <th>Actions</th>
@@ -19,7 +18,6 @@
         <% @foods.each do |food| %>
     <tr>
       <td><%=food.name%></td>
-      <td><%=food.quantity%></td>
       <td><%=food.measurement_unit%></td>
       <td><%=food.price%></td>
       <td><%=button_to "Delete", "/users/#{current_user.id}/foods/#{food.id}",

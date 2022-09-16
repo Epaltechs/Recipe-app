@@ -9,11 +9,6 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :Quantity %>
-      <%= f.number_field :quantity, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
       <%= f.label :Measurement_Unit  %>
       <%= f.select :measurement_unit, ['grams', 'kilograms', 'units', 'litres', 'dozen'],
        {}, {class: "form-select"} %>
