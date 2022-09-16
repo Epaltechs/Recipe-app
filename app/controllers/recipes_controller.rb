@@ -1,4 +1,8 @@
 class RecipesController < ApplicationController
+  load_and_authorize_resource
+  # before_action :set_user, only: %i[index show new destroy]
+  before_action :authenticate_user!, only: %i[index]
+
   def index
     @recipe = Recipe.all
   end
@@ -36,6 +40,6 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description)
+    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public)
   end
 end
