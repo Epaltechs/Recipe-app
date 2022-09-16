@@ -1,3 +1,4 @@
+<% if current_user %> 
 <nav>
 <%= link_to 'Food',user_foods_path(current_user.id) %>
 <%= link_to 'Recipes', user_recipes_path(current_user.id) %>
@@ -5,3 +6,4 @@
 <%# <%= link_to %>
 <%# <%= link_to %>
 </nav>
+<% end %>
