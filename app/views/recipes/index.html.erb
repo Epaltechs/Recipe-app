@@ -16,6 +16,6 @@
   <%end%>
   <% else %>
   <p>There's no recipe</p>
-  <%= link_to 'ADD NEW RECIPE', new_user_recipe_path %>
+  <%= link_to 'ADD NEW RECIPE', new_user_recipe_path(current_user.id) %>
   <% end %>
 </section>
