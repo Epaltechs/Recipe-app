@@ -3,8 +3,10 @@
   <% @recipe.each do |recipe|%>
     <div>
       <div>
-        <h3><%=recipe.name%></h3>
-        <%=button_to 'REMOVE', "/users/#{current_user.id}/recipes/#{recipe.id}", :method =>:delete, :data=>{ turbo: false } %>
+        <h3><%= link_to recipe.name, user_recipe_path(current_user.id, recipe) %></h3>
+        <% if can? :destroy, recipe %>
+          <%=button_to 'REMOVE', "/users/#{current_user.id}/recipes/#{recipe.id}", :method =>:delete, :data=>{ turbo: false } %>
+        <% end %>
       </div>
       <div>
         <p>Decription for the recipe</p>

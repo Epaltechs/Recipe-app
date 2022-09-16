@@ -24,10 +24,10 @@
         <%= f.text_area :description, class: "form-control" %>
       </div>
 
-      <%# <div class="form-group"> %>
-        <%# <%= f.label :Public %>
-        <%# <%= f.check_box :public, class: "form-control" %>
-      <%# </div> %>
+      <div class="form-group">
+        <%= f.label :Public %><br />
+        <%= f.select :public, ['Yes', 'No'], class: "form-control" %>
+      </div>
 
       <div class="form-group">
         <%= f.submit %>
