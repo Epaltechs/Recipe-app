@@ -9,18 +9,9 @@ class ShoppingListsController < ApplicationController
   def total_price
     price = 0
     @food.each do |recipe_food|
-      price += Food.find(recipe_food.food_id).price
+      price += Food.find(recipe_food.id).price
     end
     price
   end
-
-  # def total_price
-  #   price = 0
-  #   # @ingredients.each do |recipe_food|
-  #     price += Food.find(recipe_food.food_id).price * recipe_food.quantity
-  #   end
-  #   price
-  # end
-
   helper_method :total_price
 end
