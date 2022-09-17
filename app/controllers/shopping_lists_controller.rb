@@ -1,5 +1,4 @@
 class ShoppingListsController < ApplicationController
-
   def index
     @food = Food.all
     # @recipes = Recipe.where(user_id: current_user.id)
@@ -10,7 +9,7 @@ class ShoppingListsController < ApplicationController
   def total_price
     price = 0
     @food.each do |recipe_food|
-      price +=Food.find(recipe_food.food_id).price
+      price += Food.find(recipe_food.food_id).price
     end
     price
   end
@@ -24,5 +23,4 @@ class ShoppingListsController < ApplicationController
   # end
 
   helper_method :total_price
-
 end
