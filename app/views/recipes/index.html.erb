@@ -1,0 +1,22 @@
+<h1 class="d-flex justify-content-center">Recipes</h1>
+<section>
+<% if @recipe.length > 0%>
+  <% @recipe.each do |recipe|%>
+    <div>
+      <div><div class="card mb-3">
+      <div class="card-body">
+        <h3><%= link_to recipe.name, user_recipe_path(current_user.id, recipe) %></h3>
+        <% if can? :destroy, recipe %>
+          <%=button_to 'REMOVE', "/users/#{current_user.id}/recipes/#{recipe.id}", :method =>:delete, :data=>{ turbo: false } %>
+        <% end %>
+      </div>
+      <div>
+        <p>Decription for the recipe</p>
+        <div><%=recipe.description %></div>
+      </div>
+    </div>
+  <%end%>
+  <% else %>
+  <%= link_to 'ADD NEW RECIPE', new_user_recipe_path(current_user.id), class: "btn btn-outline-primary btn-sm" %>
+  <% end %>
+</section>
