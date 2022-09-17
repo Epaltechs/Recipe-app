@@ -1,4 +1,4 @@
-<% @foods.each do |food| %>
+<% @food.each do |food| %>
           <tr>
             <% quantity = RecipeFood.joins(:food).where(food_id: food.id).sum('quantity') %>
             <td><%= food.name %></td>

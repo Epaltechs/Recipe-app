@@ -1,8 +1,9 @@
-<% if current_user %> 
+<% if current_user %>
 <nav>
-<%= link_to 'Food',user_foods_path(current_user.id) %>
-<%= link_to 'Recipes', user_recipes_path(current_user.id) %>
-<%= link_to 'Add a recipe', new_user_recipe_path(current_user.id) %>
-<%= link_to 'Public recipes', user_public_recipes_path(current_user.id) %>
+<%= link_to 'Food',user_foods_path(current_user.id), class: "btn btn-outline-primary btn-sm" %>
+<%= link_to 'Recipes', user_recipes_path(current_user.id), class: "btn btn-outline-primary btn-sm" %>
+<%= link_to 'Add a Recipe', new_user_recipe_path(current_user.id), class: "btn btn-outline-primary btn-sm" %>
+<%= link_to 'Public Recipes', user_public_recipes_path(current_user.id), class: "btn btn-outline-primary btn-sm" %>
+<%= link_to 'Shopping Lists', shopping_lists_path(current_user.id), class: "btn btn-outline-primary btn-sm" %>
 </nav>
 <% end %>
