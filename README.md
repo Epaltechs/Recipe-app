@@ -30,6 +30,7 @@ or alternatively you can copy and paste the commands in
 - Twitter: [Emmanuel Paul](http://twitter.com/@emmapaul247)
 - AngeList: [Emmanuel Paul](https://angel.co/u/emmanuel-s-paul)
 
+
 :bust_in_silhouette: **Christian biringanine**
 
 - GitHub: [@christianbiring1](https://github.com/christianbiring1)
