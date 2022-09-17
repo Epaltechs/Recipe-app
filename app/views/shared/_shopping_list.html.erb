@@ -1,0 +1,9 @@
+<tbody>
+    <% @food.each do |food| %>
+    <tr>
+      <td><%=food.name%></td>
+      <td><%=food.measurement_unit%></td>
+      <td>$ <%=food.price%></td>
+    </tr>
+    <% end %>
+  </tbody>
