@@ -7,6 +7,8 @@ This Recipe App is designed to help a user to keep track of recipes and ingredie
 ## Built With
 - Ruby
 - Ruby on Rails
+- Postgresql
+- Bootstrap
 
 ## Getting Started
 To launch the project locally:
