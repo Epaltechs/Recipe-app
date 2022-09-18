@@ -90,7 +90,6 @@ group :development do
   gem 'rails_12factor', group: :production
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-
 end
 
 group :test do
