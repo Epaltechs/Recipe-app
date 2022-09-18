@@ -11,6 +11,10 @@ gem 'htmlbeautifier'
 
 gem 'letter_opener'
 
+group :assets do
+  gem 'uglifier'
+end
+
 # gem 'bullet', group: 'development'
 
 # add device for authentication
