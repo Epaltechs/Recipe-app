@@ -11,9 +11,9 @@ gem 'htmlbeautifier'
 
 gem 'letter_opener'
 
-group :assets do
-  gem 'uglifier'
-end
+# group :assets do
+#   gem 'uglifier'
+# end
 
 # gem 'bullet', group: 'development'
 
@@ -30,7 +30,7 @@ gem 'rails', '~> 7.0.3'
 gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1', group: :production
+gem 'pg', '~> 1.1'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
@@ -91,7 +91,7 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-  gem 'rails_12factor', group: :production
+  # gem 'rails_12factor', group: :production
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
