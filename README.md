@@ -42,7 +42,7 @@ or alternatively you can copy and paste the commands in
 
 ## :handshake: Contributing
 - Contributions, issues, and feature requests are welcome!
-- Feel free to check the [issues page](https://github.com/Epaltechs/Blog-app/issues).
+- Feel free to check the [issues page](https://github.com/Epaltechs/Recipe-app/issues).
 
 ## Show your support
 Give a :star:️ if you like this project!
@@ -53,4 +53,4 @@ Give a :star:️ if you like this project!
 - Heartfelt appreciation to all those who provided much needed inspiration.
 
 ## :memo: License
-This project is MIT licensed.
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
